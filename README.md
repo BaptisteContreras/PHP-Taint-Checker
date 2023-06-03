@@ -2,10 +2,10 @@
 
 It's a POC of a tool to try to detect tainted variables.
 
-For the moment, this very first version try to detect when a value is fetched from the `Symfony\Component\HttpFoundation\Request` object using the `get()` method.
+For the moment, this very first version tries to detect when a value is fetched from the `Symfony\Component\HttpFoundation\Request` object using the `get()` method.
 All subsequent assignations using this variable (or a tainted one) is also considered tainted.
 
-In our case, a "tainted variable" is a variable controlled by the user. It's important to sanitize and validate them well, to prevent a malicious user from manipulate it to harm your application.
+In our case, a "tainted variable" is a variable controlled by the user. It's important to sanitize and validate them well, to prevent a malicious user from manipulating them to harm your application.
 
 The analysis works in 4 steps:
 
