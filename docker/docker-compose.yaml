@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  php-taint-checker:
+    image: 'webdevops/php-dev:8.1-alpine'
+    volumes:
+      - ../.:/app
+      - ./php/custom.ini:/opt/docker/etc/php/php.ini
+    restart: unless-stopped
