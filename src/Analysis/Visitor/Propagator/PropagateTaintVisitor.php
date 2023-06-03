@@ -52,7 +52,7 @@ class PropagateTaintVisitor extends NodeVisitorAbstract
             )) {
                 if (!$assignExpr->expr instanceof Node\Expr\Variable
                     || !$this->isVariableTaintedAtLine(
-                        $assignExpr->var->name,
+                        $assignExpr->expr->name,
                         $assignExpr->getLine(),
                         $this->currentClassMethod,
                         $this->getGlobalContext($assignExpr))
